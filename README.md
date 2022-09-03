@@ -18,8 +18,7 @@
   1.
 
 ## Dependencies
-  - Tailwind React Native Classnames [link](https://github.com/tailwindlabs/heroicons)
-
+  - Tailwind @heroicons/react [link](https://github.com/tailwindlabs/heroicons)
   
 #### DISCLAIMER: 
 
