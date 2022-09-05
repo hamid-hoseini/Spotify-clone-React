@@ -15,11 +15,12 @@
 
 ## What I have learned in this project are:
 
-  1.
+  1. Authentication using Spotify APIs <sub>[Read More...](https://developer.spotify.com/)</sub>
 
 ## Dependencies
   - Tailwind @heroicons/react [link](https://github.com/tailwindlabs/heroicons)
-  
+  - Spotify Web API Node  [link](https://github.com/thelinmichael/spotify-web-api-node)
+
 #### DISCLAIMER: 
 
 This code is developed for learning purposes only. Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” of this code for education purposes.
