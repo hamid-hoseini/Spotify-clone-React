@@ -13,12 +13,13 @@ function Login({ providers }) {
         </div>
       ))}
     </div>
+
   )
 }
 
 export default Login;
 
-export async function getServerProps() {
+export async function getServerSideProps() {
   const providers = await getProviders();
 
   return {
