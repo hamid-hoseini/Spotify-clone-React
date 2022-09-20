@@ -20,6 +20,8 @@
 ## Dependencies
   - Tailwind @heroicons/react [link](https://github.com/tailwindlabs/heroicons)
   - Spotify Web API Node  [link](https://github.com/thelinmichael/spotify-web-api-node)
+  - tailwind-scrollbar-hide [link](https://www.npmjs.com/package/tailwind-scrollbar-hide)
+  - Lodash [link](https://lodash.com/)
 
 #### DISCLAIMER: 
 

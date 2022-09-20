@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Sidebar from '../components/Sidebar';
+import Center from '../components/Center';
 
 const Home: NextPage = () => {
   return (
@@ -11,11 +12,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-black h-screen overflow-hidden'>
-        {/* Sidebar */}
-        <Sidebar />
-        {/* Center */}
-      </main>
+      <div className='bg-black h-screen overflow-hidden'>
+        <main className='flex'>
+          {/* Sidebar */}
+          <Sidebar />
+          {/* Center */}
+          <Center />
+        </main>
+      </div>
 
       {/* Player */}
       <div></div>
