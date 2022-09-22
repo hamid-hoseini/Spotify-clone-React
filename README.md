@@ -16,12 +16,14 @@
 ## What I have learned in this project are:
 
   1. Authentication using Spotify APIs <sub>[Read More...](https://developer.spotify.com/)</sub>
+  2. Recoil A state management library for React <sub>[Read More...](https://recoiljs.org/)</sub>
 
 ## Dependencies
   - Tailwind @heroicons/react [link](https://github.com/tailwindlabs/heroicons)
   - Spotify Web API Node  [link](https://github.com/thelinmichael/spotify-web-api-node)
   - tailwind-scrollbar-hide [link](https://www.npmjs.com/package/tailwind-scrollbar-hide)
   - Lodash [link](https://lodash.com/)
+  - Recoil [link](https://recoiljs.org/docs/introduction/getting-started)
 
 #### DISCLAIMER: 
 
