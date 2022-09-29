@@ -17,6 +17,7 @@
 
   1. Authentication using Spotify APIs <sub>[Read More...](https://developer.spotify.com/)</sub>
   2. Recoil A state management library for React <sub>[Read More...](https://recoiljs.org/)</sub>
+  3. Adding custom styles to Tailwind and using CSS and `@layer` <sub>[Read more...](https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer)</sub>
 
 ## Dependencies
   - Tailwind @heroicons/react [link](https://github.com/tailwindlabs/heroicons)
