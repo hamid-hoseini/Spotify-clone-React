@@ -26,6 +26,34 @@
   - Lodash [link](https://lodash.com/)
   - Recoil [link](https://recoiljs.org/docs/introduction/getting-started)
 
+
+## Note
+
+> How to add a custom css into Tailwind and use it?
+Instead of adding the same classes to multiple elements we can create a custom css and use it everwhere in our code
+
+1- we need to create a `global.css`:
+```tsx
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+      @apply h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out;
+  }
+}
+```
+
+2- then we can use the custome `button` class in elements like:
+```tsx
+<div>
+  <SwitchHorizontalIcon className="button" />
+</div>
+```
+3- we should import `global.css` into `_app.tsx` instead of `tailwindcss/tailwind.css`; 
+
+
 #### DISCLAIMER: 
 
 This code is developed for learning purposes only. Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” of this code for education purposes.

@@ -4,7 +4,15 @@ import { currentTrackIdState, isPlayingState } from '../atoms/songAtom';
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 import useSongInfo from "../hooks/useSongInfo";
-import { SwitchHorizontalIcon } from "@heroicons/react/outline";
+import { HeartIcon, ReplyIcon, VolumeUpIcon as VolumnDownIcon } from "@heroicons/react/outline";
+import { 
+  RewindIcon, 
+  SwitchHorizontalIcon,
+  FastForwardIcon,
+  PauseIcon,
+  PlayIcon,
+  VolumeUpIcon
+ } from "@heroicons/react/solid";
 
 function Player() {
   const spotifyApi = useSpotify();
@@ -24,6 +32,18 @@ function Player() {
       });
     }
   };
+
+  const handlePlayPause = () => {
+    spotifyApi.getMyCurrentPlaybackState().then((data) => {
+      if (data.body.is_playing) {
+        spotifyApi.pause();
+        setIsPlaying(false);
+      } else {
+        spotifyApi.play();
+        setIsPlaying(true);
+      }
+    });
+  }
 
   useEffect(() => {
     if (spotifyApi.getAccessToken() && !currentTrackId) {
@@ -48,8 +68,38 @@ function Player() {
       </div>
       
       {/* center */}
-      <div>
-        <SwitchHorizontalIcon className="w-5 h-5" />
+      <div className="flex items-center justify-evenly">
+        <SwitchHorizontalIcon className="button" />
+        <RewindIcon 
+          // onClick={() => spotifyApi.skipToPrevious()}  -- The API is not working
+          className="button" />
+
+          {isPlaying ? (
+            <PauseIcon onClick={handlePlayPause} className="button w-10 h-10" />
+          ) : (
+            <PlayIcon onClick={handlePlayPause} className="button w-10 h-10" /> 
+          )}
+
+          <FastForwardIcon
+            // onClick={() => spotifyApi.skipToNext()}  -- The API is not working 
+            className="button"
+          />
+
+          <ReplyIcon className="button" />
+      </div>
+
+      {/* right */}
+      <div className="flex items-center space-x-3 md:space-x-4 justify-end pr-5">
+        <VolumnDownIcon className="button" onClick={() => volum > 0 && setVolum(volum - 10)}/>
+        <input
+          className="w-14 md:w-28"
+          type="range"
+          value={volume}
+          onChange={(e) => setVolume(Number(e.target.value))}
+          min={0}
+          max={100}
+        />
+        <VolumeUpIcon className="button" onClick={() => volum < 100 && setVolum(volum + 10)}/>
       </div>
     </div>
   )
