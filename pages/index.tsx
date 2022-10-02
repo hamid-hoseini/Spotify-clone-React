@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
+import { getSession, GetSessionParams } from 'next-auth/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Sidebar from '../components/Sidebar';
 import Center from '../components/Center';
 import Player from '../components/Player';
-import { getSession } from 'next-auth/react';
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Spotify clone using Nextjs, Middleware, Spotify API, NextAuth, Recoil' />
       </Head>
 
       <div className='bg-black h-screen overflow-hidden'>
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
 }
 
 export default Home
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: GetSessionParams | undefined) {
   const session = await getSession(context)
 
   return {

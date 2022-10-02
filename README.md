@@ -1,5 +1,3 @@
-### In Progress ...
-
 # Spotify clone with REACT
   A copy of the Spotify app to learn and improve coding skills with the React framework.
   (Next.js, Tailwind CSS, NextAuth, Tokens, Debounce, Spotify API, oauth JWT, Access/Fresh, Recoil)
@@ -18,6 +16,7 @@
   1. Authentication using Spotify APIs <sub>[Read More...](https://developer.spotify.com/)</sub>
   2. Recoil A state management library for React <sub>[Read More...](https://recoiljs.org/)</sub>
   3. Adding custom styles to Tailwind and using CSS and `@layer` <sub>[Read more...](https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer)</sub>
+  4. Using `useCallback` hook. useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed. <sub>[Read more...](https://reactjs.org/docs/hooks-reference.html#usecallback)</sub>
 
 ## Dependencies
   - Tailwind @heroicons/react [link](https://github.com/tailwindlabs/heroicons)
